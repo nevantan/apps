@@ -4,20 +4,22 @@
 
 import { Routes } from '../types';
 
-import Addresses from '@polkadot/app-addresses/index';
+import Memo from '@polkadot/joy-memo/index';
 
 export default ([
   {
-    Component: Addresses,
+    Component: Memo,
     display: {
+      isHidden: false,
+      needsAccounts: true,
       needsApi: [
-        'query.memo.memo',
+        'tx.memo.updateMemo'
       ]
     },
     i18n: {
-      defaultValue: 'Address Book'
+      defaultValue: 'Memo'
     },
-    icon: 'address book',
-    name: 'addresses'
+    icon: 'th',
+    name: 'memo'
   }
 ] as Routes);

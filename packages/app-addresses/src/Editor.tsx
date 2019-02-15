@@ -14,6 +14,8 @@ import keyring from '@polkadot/ui-keyring';
 import Forgetting from './Forgetting';
 import translate from './translate';
 
+import Memo from  '@polkadot/joy-memo/MemoPreview';
+
 type Props = ComponentProps & I18nProps;
 
 type State = {
@@ -114,12 +116,23 @@ class Editor extends React.PureComponent<Props, State> {
               value={editedName}
             />
           </div>
+
           <Labelled label='address:' style={{ marginTop: '.5rem' }}>
             <code>{address}</code>
           </Labelled>
+
+          <div className='ui--row'>
+            {this.renderMemo()}
+          </div>
         </div>
       </div>
     );
+  }
+
+  renderMemo() {
+    const { current } = this.state;
+
+    return current ? <Memo params={[current.address()]} markdown={false} /> : null;
   }
 
   createState (current: KeyringAddress | null): State {

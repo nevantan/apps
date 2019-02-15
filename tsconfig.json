@@ -10,6 +10,7 @@
       "@polkadot/joy-proposals/*": [ "packages/joy-proposals/src/*" ],
       "@polkadot/joy-utils/*": [ "packages/joy-utils/src/*" ],
       "@polkadot/joy-settings/*": [ "packages/joy-settings/src/*" ],
+      "@polkadot/joy-memo/*": [ "packages/joy-memo/src/*" ],
 
       "@polkadot/app-123code/*": [ "packages/app-123code/src/*" ],
       "@polkadot/app-accounts/*": [ "packages/app-accounts/src/*" ],

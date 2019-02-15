@@ -14,6 +14,8 @@ import keyring from '@polkadot/ui-keyring';
 
 import translate from './translate';
 
+import Memo from  '@polkadot/joy-memo/MemoPreview';
+
 type Props = ComponentProps & I18nProps;
 
 type State = {
@@ -97,8 +99,17 @@ class Creator extends React.PureComponent<Props, State> {
             value={name}
           />
         </div>
+        <div className='ui-row'>
+          {this.renderMemo()}
+        </div>
       </div>
     );
+  }
+
+  renderMemo() {
+    const { address, isAddressValid } = this.state;
+
+    return isAddressValid ? <Memo params={[address]} markdown={false} /> : null;
   }
 
   emptyState (): State {

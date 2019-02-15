@@ -18,6 +18,7 @@ const packages = [
   'joy-proposals',
   'joy-utils',
   'joy-settings',
+  'joy-memo',
 
   // Polkadot apps:
 
@@ -37,7 +38,7 @@ const packages = [
   'ui-app',
   'ui-params',
   'ui-reactive',
-  'ui-signer'
+  'ui-signer',
 ];
 
 const DEFAULT_THEME = 'substrate';

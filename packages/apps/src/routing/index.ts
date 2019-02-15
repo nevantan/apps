@@ -9,7 +9,7 @@ import appSettings from '@polkadot/joy-settings/index';
 import election from './joy-election';
 import proposals from './joy-proposals';
 
-import template from './123code';
+import memo from './memo';
 import accounts from './accounts';
 import addresses from './addresses';
 import democracy from './democracy';
@@ -31,12 +31,12 @@ const routes: Routes = appSettings.uiMode === 'light'
     null,
     accounts,
     addresses,
+    memo,
     null,
     election,
     proposals,
     null,
-    settings,
-    template
+    settings
   )
   : ([] as Routes).concat(
     explorer,
@@ -46,6 +46,7 @@ const routes: Routes = appSettings.uiMode === 'light'
     null,
     accounts,
     addresses,
+    memo,
     null,
     election,
     proposals,
@@ -55,8 +56,7 @@ const routes: Routes = appSettings.uiMode === 'light'
     null,
     settings,
     toolbox,
-    js,
-    template
+    js
   );
 
 export default ({
